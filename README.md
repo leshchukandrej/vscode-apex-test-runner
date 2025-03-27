@@ -11,7 +11,7 @@ A Visual Studio Code extension that enables running Salesforce Apex tests direct
 - 🔄 Automatic test discovery
 - 💻 Context menu integration
 
-![Apex Test Class](https://raw.githubusercontent.com/example/vscode-apex-test-runner/main/media/class.png)
+![Apex Test Class](https://github.com/leshchukandrej/vscode-apex-test-runner/blob/main/media/class.png?raw=true)
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ There are several ways to run tests:
    - Look for the "Run Test" and "Debug Test" links above test methods
    - Click the link to run or debug the test
 
-   ![Running Tests with CodeLens](https://raw.githubusercontent.com/example/vscode-apex-test-runner/main/media/running_tests.png)
+   ![Running Tests with CodeLens](https://github.com/leshchukandrej/vscode-apex-test-runner/blob/main/media/running_tests.png?raw=true)
 
 2. **Using Context Menu**
    - Right-click in a test file
@@ -48,7 +48,7 @@ Test results are displayed in a dedicated panel showing:
 - Detailed logs
 - Stack traces for failures
 
-![Test Results Panel](https://raw.githubusercontent.com/example/vscode-apex-test-runner/main/media/results.png)
+![Test Results Panel](https://github.com/leshchukandrej/vscode-apex-test-runner/blob/main/media/results.png?raw=true)
 
 ### Features in Detail
 
@@ -68,10 +68,10 @@ The test results panel provides:
 The extension provides detailed analysis of test execution, including performance metrics and error details:
 
 **Success Analysis**
-![Success Analysis](https://raw.githubusercontent.com/example/vscode-apex-test-runner/main/media/success_analyze.png)
+![Success Analysis](https://github.com/leshchukandrej/vscode-apex-test-runner/blob/main/media/success_analyze.png?raw=true)
 
 **Error Analysis**
-![Error Analysis](https://raw.githubusercontent.com/example/vscode-apex-test-runner/main/media/error_analyze.png)
+![Error Analysis](https://github.com/leshchukandrej/vscode-apex-test-runner/blob/main/media/error_analyze.png?raw=true)
 
 #### Context Menu Integration
 Right-click in any Apex test file to access test running commands directly from the context menu.
