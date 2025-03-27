@@ -1,0 +1,109 @@
+{
+  "name": "vscode-apex-test-runner",
+  "displayName": "Apex Test Runner",
+  "description": "Run Apex tests directly from VS Code",
+  "version": "0.0.1",
+  "publisher": "apex-tools",
+  "author": {
+    "name": "Apex Tools"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apex-tools/vscode-apex-test-runner"
+  },
+  "bugs": {
+    "url": "https://github.com/apex-tools/vscode-apex-test-runner/issues"
+  },
+  "homepage": "https://github.com/apex-tools/vscode-apex-test-runner#readme",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Testing"
+  ],
+  "activationEvents": [
+    "onLanguage:apex",
+    "workspaceContains:*.cls"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [{
+      "id": "apex",
+      "aliases": ["Apex", "apex"],
+      "extensions": [".cls", ".trigger"],
+      "configuration": "./language-configuration.json"
+    }],
+    "commands": [
+      {
+        "command": "apexTestRunner.runTest",
+        "title": "Apex: [CONTEXT] Run Single Test Method"
+      },
+      {
+        "command": "apexTestRunner.runFile",
+        "title": "Apex: [CONTEXT] Run All Tests in File"
+      },
+      {
+        "command": "apexTestRunner.runTestFromLens",
+        "title": "Apex: [LENS] Run Test Method"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == apex",
+          "command": "apexTestRunner.runTest",
+          "group": "testing"
+        },
+        {
+          "when": "resourceLangId == apex",
+          "command": "apexTestRunner.runFile",
+          "group": "testing"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run clean && npm run compile:prod",
+    "compile": "tsc -p ./",
+    "compile:prod": "tsc -p ./ --sourceMap false --removeComments true",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "clean": "rimraf out",
+    "package": "vsce package",
+    "package:prod": "npm run clean && npm run compile:prod && vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^16.x",
+    "@typescript-eslint/parser": "^5.x",
+    "@typescript-eslint/eslint-plugin": "^5.x",
+    "eslint": "^8.x",
+    "typescript": "^4.x",
+    "rimraf": "^5.0.5",
+    "vsce": "^2.15.0"
+  },
+  "dependencies": {
+    "execa": "^5.1.1"
+  },
+  "files": [
+    "out/**/*",
+    "media/**/*.png",
+    "language-configuration.json",
+    "README.md",
+    "LICENSE.md",
+    "node_modules/**/*"
+  ],
+  "galleryBanner": {
+    "color": "#1e415e",
+    "theme": "dark"
+  },
+  "keywords": [
+    "salesforce",
+    "apex",
+    "testing",
+    "test runner",
+    "sfdc"
+  ],
+  "license": "MIT"
+} 
